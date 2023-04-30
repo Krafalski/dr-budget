@@ -4,8 +4,8 @@ const express = require("express");
 // Configuration
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Home Page");
+app.get("/hello", (req, res) => {
+  res.send("hello");
 });
 
 // Transaction routes
