@@ -4,6 +4,9 @@ const express = require("express");
 // Configuration
 const app = express();
 
+// Middleware
+app.use(express.json()); // parse incoming json
+
 app.get("/hello", (req, res) => {
   res.send("hello");
 });
