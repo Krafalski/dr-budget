@@ -24,5 +24,12 @@ const cn = DATABASE_URL
 
 const db = pgp(cn);
 
-console.log("Postgres connection", cn);
+console.log(
+  "Postgres connected on",
+  PG_HOST,
+  PG_PORT,
+  PG_DATABASE,
+  "user",
+  PG_USER
+);
 module.exports = db;

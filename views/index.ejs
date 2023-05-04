@@ -18,6 +18,8 @@
     <title>Index</title>
   </head>
   <body>
+    <% const transactionDATA = JSON.stringify(transactions) %>
+    <div id="datadiv" style="display: none"><%= transactionDATA %></div>
     <h2><a href="./transactions/new">New Transaction</a></h2>
     <div>
       <canvas id="myChart"></canvas>

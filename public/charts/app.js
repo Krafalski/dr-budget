@@ -8,8 +8,11 @@ function makeData(expenses, category) {
   return dummyData;
 }
 
-// expenditures comes from the data.js file
-// console.log(expenditures);
+// GET DATA FROM INDEX.EJS
+// USE Data variable
+const dataDiv = document.getElementById("datadiv");
+let data = dataDiv.innerText;
+data = JSON.parse(data);
 
 // Select location in index.html to load the chart (must be a Canvas element)
 const ctx = document.getElementById("myChart");
