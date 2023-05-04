@@ -1,11 +1,14 @@
 // Dependencies
 const express = require("express");
+const ejs = require("ejs");
 
 // Configuration
 const app = express();
 
 // Middleware
-app.use(express.json()); // parse incoming json
+// app.use(express.json()); // parse incoming json
+app.use(express.urlencoded({ extended: false })); // parse incoming urlencoded
+app.use(express.static("public"));
 
 app.get("/hello", (req, res) => {
   res.send("hello");

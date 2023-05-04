@@ -1,0 +1,40 @@
+<!DOCname="" TYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Index</title>
+  </head>
+  <body>
+    <h1>New Transaction</h1>
+    <form action="/transactions" method="POST">
+      <label for="date">Date</label>
+      <input id="date" name="date" type="date" />
+      <label for="vendor">Vendor</label>
+      <input id="vendor" name="vendor" type="text" />
+      <label for="details">Details</label>
+      <input id="details" name="details" type="text" />
+      <label for="amount">amount</label>
+      <input id="amount" name="amount" type="number" />
+      <label for="time_type" name="time_type">Time type</label>
+      <input id="time_name type="time_type" name="time_type" type="text" />
+      <label for="category">Category</label>
+      <input id="category" name="category" type="text" />
+      <label for="is_recurring">Is Recurring</label>
+      <input id="is_recurring" name="is_recurring" type="checkbox" />
+      <label for="is_income">Is Income</label>
+      <input id="is_income" name="is_income" type="checkbox" />
+      <input name="" type="submit" />
+    </form>
+  </body>
+</html>

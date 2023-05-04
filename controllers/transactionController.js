@@ -8,7 +8,15 @@ const {
 
 // Index
 transactions.get("/", async (req, res) => {
-  res.json(await getAllTransactions());
+  const allTransactions = await getAllTransactions();
+  res.render("index.ejs", {
+    transactions: allTransactions,
+  });
+});
+
+// New
+transactions.get("/new", (req, res) => {
+  res.render("new.ejs");
 });
 
 // Show
@@ -19,8 +27,9 @@ transactions.get("/:id", async (req, res) => {
 
 // Create
 transactions.post("/", async (req, res) => {
+  console.log(req.body);
   const transaction = await createTransaction(req.body);
-  res.json(transaction);
+  res.redirect("/transactions");
 });
 
 // 404
